@@ -1,15 +1,13 @@
-# PyTorch
+# PyTorch 학습 순서
 
-Python 기초와 첫 실전 과제를 진행하면서 PyTorch 학습 pipeline을 함께 분해합니다.
+Python과 NumPy 1~7단계를 마친 뒤 아래 순서로 진행합니다.
 
-첫 프로젝트는 FashionMNIST 분류기이며 다음 순서로 진행합니다.
+1. [08 — Tensor 기초](08-tensor-basics/)
+2. [09 — Autograd와 Linear Regression](09-autograd-linear-regression/)
+3. [10 — FashionMNIST MLP](10-fashion-mnist-mlp/)
+4. [11 — FashionMNIST CNN](11-fashion-mnist-cnn/)
+5. [12 — Custom Dataset과 DataLoader](12-custom-dataset-dataloader/)
+6. [13 — ResNet Fine-tuning](13-resnet-finetuning/)
+7. [14 — 평가와 Error Analysis](14-evaluation-error-analysis/)
 
-1. Tensor와 shape 확인
-2. `Dataset`과 `DataLoader`
-3. `nn.Module`과 `forward()`
-4. loss와 optimizer
-5. training/validation loop
-6. checkpoint와 inference
-7. ONNX export
-
-실제 학습을 시작할 때 `01-fashion-mnist/` 폴더를 추가합니다. 빈 예제 코드를 미리 쌓지 않습니다.
+각 단계에서 `README.md`를 먼저 읽고 `starter.py`를 직접 구현한 뒤 `notes.md`에 shape, 결과, 실수와 재구현 여부를 기록합니다.

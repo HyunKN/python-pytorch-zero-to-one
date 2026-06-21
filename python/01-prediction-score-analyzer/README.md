@@ -5,7 +5,7 @@
 ## Input
 
 ```python
-labels = ["gwanghwamun", "gyeongbokgung", "namsan", "bulguksa"]
+labels = ["cat", "dog", "bird", "rabbit"]
 scores = [0.12, 0.71, 0.10, 0.07]
 threshold = 0.50
 ```
@@ -21,13 +21,13 @@ threshold = 0.50
 
 ```python
 {
-    "top1": {"label": "gyeongbokgung", "score": 0.71},
+    "top1": {"label": "dog", "score": 0.71},
     "top3": [
-        {"label": "gyeongbokgung", "score": 0.71},
-        {"label": "gwanghwamun", "score": 0.12},
-        {"label": "namsan", "score": 0.10},
+        {"label": "dog", "score": 0.71},
+        {"label": "cat", "score": 0.12},
+        {"label": "bird", "score": 0.10},
     ],
-    "decision": "gyeongbokgung",
+    "decision": "dog",
 }
 ```
 
@@ -40,7 +40,7 @@ threshold = 0.50
 - 정렬과 Top-K
 - threshold 기반 decision
 
-먼저 순수 Python으로 구현합니다. 완성한 다음 같은 기능을 PyTorch Tensor와 `torch.topk()`로 다시 구현합니다.
+이 단계에서는 순수 Python으로 구현합니다. 같은 개념은 7단계에서 NumPy로 다시 구현합니다.
 
 ## 완료 기준
 

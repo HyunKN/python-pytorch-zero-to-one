@@ -5,85 +5,88 @@
 
 ## 최종 목표
 
-Python으로 Vision 모델의 데이터 처리, 학습, 평가를 직접 구현하고 일부 inference를 C++로 실행합니다.
+Python으로 Vision 모델의 데이터 처리, 학습, 평가를 직접 구현하고 ONNX Runtime으로 변환·검증·측정합니다.
 
-## 1~2주차: 작동하는 분류기 분해하기
+## 1~2주차: Python 기초와 데이터 처리
 
-메인 프로젝트: FashionMNIST MLP 분류기
+실습 단계: 01~04
 
-- [ ] 완성된 PyTorch 코드 실행
-- [ ] 변수, `if`, `for`, 함수, list, class 학습
-- [ ] Tensor shape 확인
-- [ ] 학습 전후 loss와 accuracy 출력
-- [ ] 코드를 기능별로 분해
-- [ ] training loop 직접 재작성
-- [ ] LeetCode Array, String, Hash Map Easy 10문제
+- [ ] Prediction Score Analyzer
+- [ ] List와 Dictionary 요약
+- [ ] JSON 데이터 읽기
+- [ ] 이미지 폴더 검사
+- [ ] LeetCode Array, String, Hash Map 문제 병행
 
 완료 기준:
 
-- `train.py`로 모델을 학습할 수 있습니다.
-- 각 코드 블록의 역할을 설명할 수 있습니다.
-- training loop를 보지 않고 대략 작성할 수 있습니다.
+- list, dict, function, file 처리 코드를 직접 작성할 수 있습니다.
+- 데이터의 입력과 반환 구조를 설명할 수 있습니다.
+- 다음 날 핵심 함수를 보지 않고 다시 작성할 수 있습니다.
 
-## 3~4주차: CNN과 데이터 처리
+## 3~4주차: NumPy와 PyTorch 계산 기초
 
-메인 프로젝트: FashionMNIST CNN 분류기
+실습 단계: 05~09
 
-- [ ] NumPy와 Tensor 차이 이해
-- [ ] 이미지 normalization 적용
-- [ ] `Dataset`, `DataLoader` 사용
-- [ ] train/validation 분리
-- [ ] MLP를 CNN으로 변경
-- [ ] checkpoint 저장 및 불러오기
-- [ ] 잘못 예측한 이미지 출력
-- [ ] LeetCode Stack, Queue, Sorting, Binary Search 연습
+- [ ] NumPy array와 shape
+- [ ] 이미지 normalization
+- [ ] Cosine similarity와 Top-K
+- [ ] PyTorch Tensor와 device
+- [ ] Autograd와 Linear Regression
 
 완료 기준:
 
-- `train`, `evaluate`, `predict`를 각각 실행할 수 있습니다.
+- NumPy array와 Tensor의 차이를 설명할 수 있습니다.
+- shape와 dtype을 추적할 수 있습니다.
+- prediction, loss, backward, optimizer 순서를 설명할 수 있습니다.
+
+## 5~6주차: FashionMNIST 학습 Pipeline
+
+실습 단계: 10~11
+
+- [ ] FashionMNIST MLP 학습
+- [ ] FashionMNIST CNN 학습
+- [ ] Dataset과 DataLoader 사용
+- [ ] training/validation loop 작성
+- [ ] checkpoint 저장과 불러오기
+- [ ] MLP/CNN 결과 비교
+
+완료 기준:
+
 - batch, epoch, loss, optimizer를 설명할 수 있습니다.
-- evaluation loop를 직접 구현할 수 있습니다.
+- MLP와 CNN의 출력 shape를 추적할 수 있습니다.
+- 같은 validation set에서 두 모델을 비교할 수 있습니다.
 
-## 5~6주차: 실제 이미지 데이터
+## 7~8주차: 실제 Vision 데이터와 Fine-tuning
 
-메인 프로젝트: 소규모 custom image classifier
+실습 단계: 12~14
 
-- [ ] 이미지 폴더와 class 구성
-- [ ] Pillow 또는 OpenCV로 데이터 확인
-- [ ] augmentation 적용
-- [ ] ResNet18 fine-tuning
-- [ ] confusion matrix 작성
-- [ ] 실패 사례 분석
-- [ ] learning rate 실험
+- [ ] Custom Dataset과 DataLoader
+- [ ] train/validation transform 분리
+- [ ] ResNet fine-tuning
+- [ ] accuracy와 class별 recall 계산
+- [ ] confusion matrix와 실패 사례 분석
 
 완료 기준:
 
-```powershell
-python train.py
-python evaluate.py
-python predict.py --image sample.jpg
-```
+- 실제 이미지 폴더에서 training pipeline을 구성할 수 있습니다.
+- pretrained model을 dataset class 수에 맞게 수정할 수 있습니다.
+- metric과 실패 사례를 근거로 모델을 설명할 수 있습니다.
 
-세 명령을 각각 실행할 수 있습니다.
+## 9~10주차: ONNX 배포와 측정
 
-## 7~8주차: C++ 시작
-
-- [ ] 함수, `vector`, `string`
-- [ ] `unordered_map`
-- [ ] class와 reference
-- [ ] header/source 분리
-- [ ] CMake
-- [ ] OpenCV로 이미지 읽기
-- [ ] Python으로 풀었던 LeetCode 문제 15개를 C++로 재작성
-
-## 9~10주차: 배포까지 연결
+실습 단계: 15~16
 
 - [ ] PyTorch 모델을 ONNX로 export
 - [ ] ONNX Runtime Python inference
-- [ ] PyTorch와 ONNX 출력 비교
-- [ ] 가능하면 C++ ONNX Runtime inference
-- [ ] latency와 model size 측정
-- [ ] README 작성
+- [ ] PyTorch와 ONNX 출력 parity 확인
+- [ ] warm-up 후 latency 반복 측정
+- [ ] median, p90, model size 기록
+
+완료 기준:
+
+- 동일 입력에서 PyTorch와 ONNX 출력 차이를 측정할 수 있습니다.
+- benchmark 조건과 수치를 분리해 기록할 수 있습니다.
+- 숫자를 근거로 배포 결과와 한계를 설명할 수 있습니다.
 
 ## 일일 루틴: 3시간 기준
 
@@ -100,11 +103,11 @@ python predict.py --image sample.jpg
 4. 다음 날 핵심 코드를 보지 않고 다시 작성합니다.
 5. 실행 성공과 개념 이해를 별도로 확인합니다.
 
-## 첫날 체크리스트
+## 첫 단계 체크리스트
 
-- [ ] Running Sum 문제를 손으로 계산
-- [ ] `list`, `for`, accumulator 개념 확인
-- [ ] `running_sum()` 직접 구현
-- [ ] LeetCode 제출
-- [ ] 풀이를 보지 않고 다시 작성
-- [ ] Day 1 `README.md`에 학습 내용 기록
+- [ ] 01단계 README 읽기
+- [ ] 예시 입력과 예상 결과를 손으로 확인
+- [ ] `analyze_scores()` 직접 구현
+- [ ] 최소 세 가지 입력으로 결과 확인
+- [ ] `notes.md`에 Approach와 Mistakes 기록
+- [ ] 다음 날 함수를 다시 작성
