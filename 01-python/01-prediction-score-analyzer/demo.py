@@ -10,6 +10,7 @@ def analyze_scores(
     ranked = sorted(
         zip(labels, scores, strict=True), key=lambda item: item[1], reverse=True
     )
+    
     top_items = [
         {"label": label, "score": float(score)} for label, score in ranked[:3]
     ]
