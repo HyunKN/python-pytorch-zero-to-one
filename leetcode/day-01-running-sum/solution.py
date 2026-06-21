@@ -1,8 +1,10 @@
 def running_sum(nums: list[int]) -> list[int]:
     """Return the cumulative sum for each position in nums."""
-    raise NotImplementedError("Implement Day 1: Running Sum")
-
+    for i in range(1, len(nums)):
+        nums[i] += nums[i-1]
+    return nums
 
 if __name__ == "__main__":
-    example = [1, 2, 3, 4]
-    print(running_sum(example))
+    from check import run_tests
+
+    raise SystemExit(0 if run_tests(running_sum) else 1)
