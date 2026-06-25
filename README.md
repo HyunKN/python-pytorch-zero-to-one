@@ -64,7 +64,7 @@ notes.md     학습 기록
 |---:|---|---|---|:---:|
 | 01 | Python | [01. Prediction Score Analyzer](01-python/01-prediction-score-analyzer/) | list, dict, Top-K | ✅ |
 | 02 | Python | [02. List와 Dictionary 요약](01-python/02-list-dictionary-summary/) | 반복문, 집계 | ✅ |
-| 03 | Python | [03. JSON 데이터 읽기](01-python/03-json-data-reader/) | file, JSON | ⬜ |
+| 03 | Python | [03. JSON 데이터 읽기](01-python/03-json-data-reader/) | file, JSON | ✅ |
 | 04 | Python | [04. 이미지 폴더 검사](01-python/04-image-folder-inspector/) | pathlib, filtering | ⬜ |
 | 05 | NumPy | [01. Array와 Shape](02-numpy/01-array-and-shape/) | shape, dtype, axis | ⬜ |
 | 06 | NumPy | [02. 이미지 Normalization](02-numpy/02-image-normalization/) | broadcasting, dtype | ⬜ |
