@@ -92,19 +92,19 @@ LeetCode는 Python 문법, 자료구조, algorithmic thinking을 연습하는 �
 | Day | Problem | Topic | Status |
 |---:|---|---|:---:|
 | 01 | [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/) · [기록](leetcode/day-01-running-sum/) | Array, Loop | ✅ |
-| 02 | [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/) | Condition | ✅ |
-| 03 | [Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/) | Nested List, Loop | ✅ |
-| 04 | [Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) | Array | ⬜ |
-| 05 | [Merge Strings Alternately](https://leetcode.com/problems/merge-strings-alternately/) | String, Index | ⬜ |
-| 06 | [Two Sum](https://leetcode.com/problems/two-sum/) | Hash Map | ⬜ |
-| 07 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | Set | ⬜ |
-| 08 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | Hash Map, String | ⬜ |
-| 09 | [Majority Element](https://leetcode.com/problems/majority-element/) | Counting | ⬜ |
-| 10 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | State Update | ⬜ |
-| 11 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | String, Two Pointers | ⬜ |
-| 12 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Stack | ⬜ |
-| 13 | [Binary Search](https://leetcode.com/problems/binary-search/) | Binary Search | ⬜ |
-| 14 | [Search Insert Position](https://leetcode.com/problems/search-insert-position/) | Binary Search | ⬜ |
+| 02 | [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/) · [기록](leetcode/day-02-Fizz Buzz/) | Condition | ✅ |
+| 03 | [Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/) · [기록](leetcode/day-03-richest-customer-wealth/) | Nested List, Loop | ✅ |
+| 04 | [Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) · [기록](leetcode/day-04-concatenation-of-array/) | Array | ⬜ |
+| 05 | [Merge Strings Alternately](https://leetcode.com/problems/merge-strings-alternately/) · [기록](leetcode/day-05-merge-strings-alternately/) | String, Index | ⬜ |
+| 06 | [Two Sum](https://leetcode.com/problems/two-sum/) · [기록](leetcode/day-06-two-sum/) | Hash Map | ⬜ |
+| 07 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) · [기록](leetcode/day-07-contains-duplicate/) | Set | ⬜ |
+| 08 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) · [기록](leetcode/day-08-valid-anagram/) | Hash Map, String | ⬜ |
+| 09 | [Majority Element](https://leetcode.com/problems/majority-element/) · [기록](leetcode/day-09-majority-element/) | Counting | ⬜ |
+| 10 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) · [기록](leetcode/day-10-best-time-to-buy-and-sell-stock/) | State Update | ⬜ |
+| 11 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) · [기록](leetcode/day-11-valid-palindrome/) | String, Two Pointers | ⬜ |
+| 12 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) · [기록](leetcode/day-12-valid-parentheses/) | Stack | ⬜ |
+| 13 | [Binary Search](https://leetcode.com/problems/binary-search/) · [기록](leetcode/day-13-binary-search/) | Binary Search | ⬜ |
+| 14 | [Search Insert Position](https://leetcode.com/problems/search-insert-position/) · [기록](leetcode/day-14-search-insert-position/) | Binary Search | ⬜ |
 
 ## 저장소 전체 검증
 
