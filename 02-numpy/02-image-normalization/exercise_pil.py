@@ -8,6 +8,7 @@
      NumPy broadcasting이 어떤 축에서 일어나는지 생각해 보세요.
 """
 
+from numpy import float32
 import numpy as np
 from PIL import Image
 
@@ -21,11 +22,23 @@ def normalize_image(
         image: (H, W, C) uint8 배열. Pillow로 불러온 RGB 이미지.
         mean:  (C,) float32 배열. 각 channel의 평균.
         std:   (C,) float32 배열. 각 channel의 표준편차. 0이 포함되면 안 됩니다.
+        
 
     Returns:
         (H, W, C) float32 배열. normalize된 이미지.
     """
-    raise NotImplementedError("이미지 normalization을 구현하세요.")
+
+    if image.ndim != 3:
+        raise ValueError("image shape는 (height, width, channels)여야 합니다.")
+    if mean.shape != (image.shape[-1],) or std.shape != (image.shape[-1],):
+        raise ValueError("mean과 std의 길이는 image 채널 수와 같아야 합니다.")
+    if np.any(std == 0):
+        raise ValueError("std에는 0이 포함될 수 없습니다.")
+
+    scaled = image.astype(np.float32) / 255.0
+    return ((scaled - mean.astype(np.float32)) / std.astype(np.float32)).astype(np.float32)
+    
+    # raise NotImplementedError("이미지 normalization을 구현하세요.")
 
 
 def main() -> None:

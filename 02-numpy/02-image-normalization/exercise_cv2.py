@@ -30,7 +30,17 @@ def normalize_image(
     Returns:
         (H, W, C) float32 배열. normalize된 이미지.
     """
-    raise NotImplementedError("이미지 normalization을 구현하세요.")
+    # raise NotImplementedError("이미지 normalization을 구현하세요.")
+    if image.ndim != 3:
+        raise ValueError("image shape는 (height, width, channels)여야 합니다.")
+    if mean.shape != (image.shape[-1],) or std.shape != (image.shape[-1],):
+        raise ValueError("mean과 std 길이는 image channel 수와 같아야 합니다.")
+    if np.any(std == 0):
+        raise ValueError("std에는 0이 포함될 수 없습니다.")
+
+    scaled = image.astype(np.float32) / 255.0
+    return ((scaled - mean.astype(np.float32)) / std.astype(np.float32)).astype(
+        np.float32)
 
 
 def main() -> None:
@@ -44,7 +54,9 @@ def main() -> None:
 
     # ── BGR→RGB 변환을 구현하세요 ─────────────────────────────────────────
     # image_rgb = ???
-    raise NotImplementedError("BGR→RGB 변환을 구현하세요. (cv2.cvtColor 사용)")
+    # raise NotImplementedError("BGR→RGB 변환을 구현하세요. (cv2.cvtColor 사용)")
+    image_rgb = cv2.cvtColor(image_bgr, cv2.COLOR_BGR2RGB)
+    print(f"\nBGR→RGB 변환 후 첫 번째 픽셀 (R,G,B) : {image_rgb[0, 0]}")
 
     mean = np.array([0.485, 0.456, 0.406], dtype=np.float32)
     std  = np.array([0.229, 0.224, 0.225], dtype=np.float32)
